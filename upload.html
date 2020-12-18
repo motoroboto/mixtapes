@@ -61,7 +61,7 @@
 
                                                         <div v-if="!video">
 
-                                                            <input type="file" @change="onFileChange">
+                                                            <input type="file" name="video" @change="onFileChange">
                                                         </div>
                                                         <div v-else>
                                                             <video :src="video"></video><br>
@@ -87,7 +87,7 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group"> <label
                                                                             for="form_need">Region</label>
-                                                                        <select id="form_need" name="need"
+                                                                        <select id="form_need" name="region"
                                                                             class="form-control" data-error="Region.">
                                                                             <option value="" selected disabled>
                                                                                 --Region--
@@ -102,9 +102,9 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group"> <label for="form_need">What
-                                                                            Kind of
-                                                                            Videos?</label>
-                                                                        <select id="form_need" name="need"
+                                                                            Type of
+                                                                            Video?</label>
+                                                                        <select id="form_need" name="type"
                                                                             class="form-control"
                                                                             data-error="Video Criteria.">
                                                                             <option value="" selected disabled>--Video
