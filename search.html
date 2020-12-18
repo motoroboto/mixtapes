@@ -67,15 +67,20 @@
 
                                                         <div class="form-group"> <label for="form_name">Start
                                                                 Date</label> <input id="form_name" type="date"
-                                                                name="name" class="form-control"
+                                                                name="startdate" class="form-control"
                                                                 data-error="Start Date is required.">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <div class="form-group"> <label
-                                                                for="form_lastname">Region</label>
-                                                            <input id="form_lastname" type="text" name="surname"
-                                                                class="form-control" data-error="Region is required.">
+                                                        <div class="form-group"> <label for="form_need">Region</label>
+                                                            <select id="form_need" name="region" class="form-control" data-error="Region.">
+                                                                <option value="" selected disabled>
+                                                                    --Region--
+                                                                </option>
+                                                                <option>Manu</option>
+                                                                <option>Tambopata</option>
+                                                                <option>Iquitos</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -83,14 +88,14 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group"> <label for="form_email">End
                                                                 Date</label> <input id="form_email" type="date"
-                                                                name="email" class="form-control"
+                                                                name="enddate" class="form-control"
                                                                 data-error="End Date is required.">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <div class="form-group"> <label for="form_need">What Kind of
+                                                        <div class="form-group"> <label for="form_need">What Type of
                                                                 Videos?</label>
-                                                            <select id="form_need" name="need" class="form-control"
+                                                            <select id="form_need" name="type" class="form-control"
                                                                 data-error="Video Criteria.">
                                                                 <option value="" selected disabled>--Video Criteria--
                                                                 </option>
@@ -100,21 +105,6 @@
                                                                 <option>Questionable Data</option>
                                                             </select>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group"> <label for="form_message">Additonal
-                                                                Details</label>
-                                                            <textarea id="form_message" name="message"
-                                                                class="form-control"
-                                                                placeholder="Write your message here." rows="4"
-                                                                data-error="Please, leave us a message."></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12"> <input type="submit"
-                                                            class="btn btn-primary btn-send pt-2 btn-block "
-                                                            value="Search">
                                                     </div>
                                                 </div>
                                             </div>
