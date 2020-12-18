@@ -68,8 +68,8 @@
                                                             <button class="btn btn-primary" v-if="!uploadURL"
                                                                 @click="removevideo">Remove
                                                                 video</button>
-                                                            <button class="btn btn-primary" v-if="!uploadURL"
-                                                                @click="uploadvideo">Upload
+                                                            <button type="submit" class="btn btn-primary"
+                                                                v-if="!uploadURL" @click="uploadvideo">Upload
                                                                 video</button>
 
                                                             <h2 v-if="uploadURL">Success! video uploaded to bucket.</h2>
@@ -102,13 +102,13 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group"> <label for="form_need">What
-                                                                            Type of
-                                                                            Video?</label>
+                                                                            Kind of
+                                                                            Videos?</label>
                                                                         <select id="form_need" name="type"
                                                                             class="form-control"
-                                                                            data-error="Video Criteria.">
+                                                                            data-error="Video Type.">
                                                                             <option value="" selected disabled>--Video
-                                                                                Criteria--
+                                                                                Type--
                                                                             </option>
                                                                             <option>Known Mine</option>
                                                                             <option>Deforestation</option>
