@@ -62,7 +62,8 @@
                                         <video :src="video"></video><br>
                                         <button class="btn btn-primary" v-if="!uploadURL" @click="removevideo">Remove
                                             video</button>
-                                        <button class="btn btn-primary" v-if="!uploadURL" @click="uploadvideo">Upload
+                                        <button class="btn btn-primary" v-if="!uploadURL"
+                                            @click="uploadvideo(); submitVideo();">Upload
                                             video</button>
 
                                     </div>
@@ -186,7 +187,7 @@
                     this.video = ''
                 },
                 uploadvideo: async function (e) {
-                    console.log('Upload clicked!!!!!!!')
+                    console.log('Upload clicked')
                     // Get the presigned URL
                     const response = await axios({
                         method: 'GET',
@@ -209,29 +210,24 @@
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
                     const videoURL = response.url;
-                    const URLstring = url.toString(videoURL);
-
-                    console.log(URLstring);
-                    console.log('SECOND FUNCTION!!!!')
+                    console.log(videoURL);
+                    const URLSTRING = url.toString(videoURL);
+                    console.log(URLSTRING);
+                    submitVideo(URLSTRING)
+                },
+                submitVideo: async function (URLSTRING) {
                     var data = {
-                        url: URLstring,
+                        url: videoURL,
                         date: parseInt($("#date").val().replace(/-/g, "")),
                         region: $("#region").val(),
                         type: $("#videotype").val(),
                     };
                     console.log(data);
-                    $.ajax({
-                        type: "POST",
-                        url: databaseEndpoint,
-                        crossDomain: true,
-                        data: data,
-                        dataType: "json",
-                        contentType: "application/json",
-                    }).then(function () {
-                        console.log("successful upload!");
-                    });
-                },
-                
+
+                    let res = await axios.post(databaseEndpoint, data);
+                    console.log(res.data);
+
+                }
 
             }
         })
