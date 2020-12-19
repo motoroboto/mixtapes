@@ -148,7 +148,6 @@
         /* ENTER YOUR ENDPOINT HERE */
 
         const s3Endpoint = 'https://ld4w6jm7ec.execute-api.us-east-1.amazonaws.com/uploads' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
-        const videoURL = ''
         const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/addvideo/'
 
         new Vue({
@@ -203,7 +202,6 @@
                         body: blobData
                     })
                     console.log('Result: ', result)
-                    videoURL = response.url;
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
                     const videoURL = this.url;
