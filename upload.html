@@ -66,7 +66,7 @@
                                             video</button>
 
                                     </div>
-                                    <h2 v-if="uploadURL">Success! video uploaded to bucket.</h2>
+                                    <h2 v-if="uploadURL">Success! video uploaded!</h2>
                                 </div>
                             </div>
                             <form id="contact-form" role="form">
@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row"><button type="submit" class="btn btn-primary btn-block">Search</button>
+                        <div class="row"><button type="submit" class="btn btn-primary btn-block">Submit</button>
                         </div>
                         </form>
                     </div>
@@ -144,8 +144,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="lib/js/scripts.js"></script>
     <script>
         const MAX_VIDEO_SIZE = 1000000000
 
@@ -208,7 +206,28 @@
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
                 },
-            }
+            },
+            submitVideo: function (event) {
+                event.preventDefault();
+                var data = {
+                    date: parseInt($("#date").val().replace(/-/g, "")),
+                    region: $("#region").val(),
+                    type: $("#videotype").val(),
+                };
+                console.log(data);
+                $.ajax({
+                    type: "POST",
+                    url:
+                        "https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/addvideo",
+                    crossDomain: true,
+                    data: data,
+                    dataType: "json",
+                    contentType: "application/json",
+                }).then(function () {
+                    console.log("successful upload!")
+                })
+            },
+
         })
     </script>
 </body>
