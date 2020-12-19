@@ -207,7 +207,6 @@
                     videoURL = response.url;
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
-<<<<<<< HEAD
                     // const videoURL = url.toString(response.url);
                     // console.log(videoURL);
                     // submitVideo(videoURL);
@@ -215,15 +214,6 @@
                 submitVideo: async function (videoURL) {
                     var formData = new FormData( {
                         // url: videoURL,
-=======
-              
-                    console.log(videoURL);
-                    submitVideo(videoURL);
-                },
-                submitVideo: async function (videoURL) {
-                     data = {
-                        url: videoURL,
->>>>>>> refs/remotes/origin/main
                         date: parseInt($("#date").val().replace(/-/g, "")),
                         region: $("#region").val(),
                         type: $("#videotype").val(),
