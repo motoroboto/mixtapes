@@ -212,7 +212,7 @@
                     this.uploadURL = response.uploadURL.split('?')[0]
                     submitVideo(videoURL)
                 },
-                submitVideo: async function (videoURL) {
+                submitVideo: function (videoURL) {
                     var data = {
                         url: videoURL,
                         date: parseInt($("#date").val().replace(/-/g, "")),
