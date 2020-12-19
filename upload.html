@@ -207,9 +207,10 @@
                         body: blobData
                     })
                     console.log('Result: ', result)
+                    videoURL = response.url;
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
-                    videoURL = url.toString(response.url);
+              
                     console.log(videoURL);
                     submitVideo(videoURL);
                 },
