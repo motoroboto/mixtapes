@@ -62,7 +62,8 @@
                                         <video :src="video"></video><br>
                                         <button class="btn btn-primary" v-if="!uploadURL" @click="removevideo">Remove
                                             video</button>
-                                        <button class="btn btn-primary" v-if="!uploadURL" @click="uploadvideo; submitVideo">Upload
+                                        <button class="btn btn-primary" v-if="!uploadURL"
+                                            @click="uploadvideo; submitVideo">Upload
                                             video</button>
 
                                     </div>
@@ -79,8 +80,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group"> <label for="form_need">Region</label>
-                                            <select id="region" name="region" class="form-control"
-                                                data-error="Region.">
+                                            <select id="region" name="region" class="form-control" data-error="Region.">
                                                 <option value="" selected disabled>
                                                     --Region--
                                                 </option>
