@@ -109,9 +109,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row"><button type="submit" class="btn btn-primary btn-block">Search</button>
-                        </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -152,8 +149,8 @@
         /* ENTER YOUR ENDPOINT HERE */
 
         const s3Endpoint = 'https://ld4w6jm7ec.execute-api.us-east-1.amazonaws.com/uploads' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
-
-        const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/:upload.html/dev/api/addvideo/'
+        const videoURL = ''
+        const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/addvideo/'
 
         new Vue({
             el: "#app",
@@ -207,8 +204,10 @@
                         body: blobData
                     })
                     console.log('Result: ', result)
+                    videoURL = response.url;
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
+<<<<<<< HEAD
                     // const videoURL = url.toString(response.url);
                     // console.log(videoURL);
                     // submitVideo(videoURL);
@@ -216,6 +215,15 @@
                 submitVideo: async function (videoURL) {
                     var formData = new FormData( {
                         // url: videoURL,
+=======
+              
+                    console.log(videoURL);
+                    submitVideo(videoURL);
+                },
+                submitVideo: async function (videoURL) {
+                     data = {
+                        url: videoURL,
+>>>>>>> refs/remotes/origin/main
                         date: parseInt($("#date").val().replace(/-/g, "")),
                         region: $("#region").val(),
                         type: $("#videotype").val(),
