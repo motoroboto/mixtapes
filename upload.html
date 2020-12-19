@@ -212,11 +212,11 @@
                     // submitVideo(videoURL);
                 },
                 submitVideo: async function (videoURL) {
-                    var formData = new FormData( {
+                    var formData = new FormData();
                         // url: videoURL,
-                        date: parseInt($("#date").val().replace(/-/g, "")),
-                        region: $("#region").val(),
-                        type: $("#videotype").val(),
+                        formData.append("date", "parseInt($("#date").val().replace(/-/g, ""))";
+                        formData.append("region", "$("#region").val())");     
+                        formData.append("type", "$("#videotype").val()");             
                     });
                     console.log(formData);
 
