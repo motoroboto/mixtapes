@@ -209,10 +209,12 @@
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
                     const videoURL = response.url;
-                    
+                    const URLstring = url.toString(videoURL);
+
+                    console.log(URLstring);
                     console.log('SECOND FUNCTION!!!!')
                     var data = {
-                        url: videoURL,
+                        url: URLstring,
                         date: parseInt($("#date").val().replace(/-/g, "")),
                         region: $("#region").val(),
                         type: $("#videotype").val(),
