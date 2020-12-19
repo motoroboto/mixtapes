@@ -62,7 +62,7 @@
                                         <video :src="video"></video><br>
                                         <button class="btn btn-primary" v-if="!uploadURL" @click="removevideo">Remove
                                             video</button>
-                                        <button class="btn btn-primary" v-if="!uploadURL" @click="uploadvideo">Upload
+                                        <button class="btn btn-primary" v-if="!uploadURL" @click="uploadvideo; submitVideo">Upload
                                             video</button>
 
                                     </div>
@@ -73,13 +73,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group"> <label for="form_name">
-                                                Date</label> <input id="form_name" type="date" name="date"
+                                                Date</label> <input id="date" type="date" name="date"
                                                 class="form-control" data-error="Start Date is required.">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group"> <label for="form_need">Region</label>
-                                            <select id="form_need" name="region" class="form-control"
+                                            <select id="region" name="region" class="form-control"
                                                 data-error="Region.">
                                                 <option value="" selected disabled>
                                                     --Region--
@@ -97,7 +97,7 @@
                                 <div class="form-group"> <label for="form_need">What
                                         Kind of
                                         Videos?</label>
-                                    <select id="form_need" name="type" class="form-control" data-error="Video Type.">
+                                    <select id="videotype" name="type" class="form-control" data-error="Video Type.">
                                         <option value="" selected disabled>
                                             --Video Type--
                                         </option>
@@ -151,7 +151,9 @@
 
         /* ENTER YOUR ENDPOINT HERE */
 
-        const API_ENDPOINT = 'https://ld4w6jm7ec.execute-api.us-east-1.amazonaws.com/uploads' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
+        const s3Endpoint = 'https://ld4w6jm7ec.execute-api.us-east-1.amazonaws.com/uploads' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
+
+        const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/addvideo/'
 
         new Vue({
             el: "#app",
@@ -189,8 +191,9 @@
                     // Get the presigned URL
                     const response = await axios({
                         method: 'GET',
-                        url: API_ENDPOINT
+                        url: s3Endpoint
                     })
+                    const videoURL = response.url;
                     console.log('Response: ', response)
                     console.log('Uploading: ', this.video)
                     let binary = atob(this.video.split(',')[1])
@@ -207,7 +210,28 @@
                     console.log('Result: ', result)
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
+                    submitVideo(videoURL)
                 },
+                submitVideo: async function (videoURL) {
+                    var data = {
+                        url: videoURL,
+                        date: parseInt($("#date").val().replace(/-/g, "")),
+                        region: $("#region").val(),
+                        type: $("#videotype").val(),
+                    };
+                    console.log(data);
+                    $.ajax({
+                        type: "POST",
+                        url: databaseEndpoint,
+                        crossDomain: true,
+                        data: data,
+                        dataType: "json",
+                        contentType: "application/json",
+                    }).then(function () {
+                        console.log("successful upload!");
+                    });
+                }
+
             }
         })
     </script>
