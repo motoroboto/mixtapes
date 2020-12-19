@@ -64,6 +64,7 @@
                                             video</button>
                                         <button class="btn btn-primary" v-if="!uploadURL" @click="uploadvideo">Upload
                                             video</button>
+
                                     </div>
                                     <h2 v-if="uploadURL">Success! video uploaded to bucket.</h2>
                                 </div>
@@ -206,7 +207,28 @@
                     console.log('Result: ', result)
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
-                }
+                },
+                // submitVideo: function (event) {
+                //     event.preventDefault();
+                //     var data = {
+                //         date: parseInt($("#date").val().replace(/-/g, "")),
+                //         region: $("#region").val(),
+                //         type: $("#videotype").val(),
+                //     };
+                //     console.log(data);
+                //     $.ajax({
+                //         type: "POST",
+                //         url:
+                //             "https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/addvideo",
+                //         crossDomain: true,
+                //         data: data,
+                //         dataType: "json",
+                //         contentType: "application/json",
+                //     }).then(function(){
+                //         console.log("successful upload!")
+                //     })
+                // }
+
             }
         })
     </script>
