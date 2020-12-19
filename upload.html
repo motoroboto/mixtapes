@@ -209,9 +209,7 @@
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
                     const videoURL = response.url;
-                    submitVideo(videoURL)
-                },
-                submitVideo: function (videoURL) {
+                    
                     console.log('SECOND FUNCTION!!!!')
                     var data = {
                         url: videoURL,
@@ -230,7 +228,8 @@
                     }).then(function () {
                         console.log("successful upload!");
                     });
-                }
+                },
+                
 
             }
         })
