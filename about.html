@@ -47,25 +47,19 @@
         <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
                 <h2 class="text-white-50 mx-auto mt-1 mb-5">
-                    <p>This would be where more info about the project goes. Lorem,
-                        ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos, fugit aliquid sint id
-                        delectus quo in voluptatibus officia alias commodi deserunt aut nemo cum, praesentium obcaecati
-                        voluptas ut ipsum?</p>
+                    <p>A.S.G.M. or Artisanal Small-Scale Gold Mining is a common practice in the Amazon rainforest that has been shown to
+                    contribute to alarming levels of deforestation and loss of biodiversity. The ASGM lab at Wake Forest University is an
+                    interdisciplinary lab combining researchers from the Computer Science and Biology departments. The ASGM-WFU lab utilizes
+                    machine learning algorithms that are deployed to automated drones to monitor areas of known and/or rapidly developing
+                    deforestation. This site will be used by the ASGM researchers in order to automate the ML workflow. This front
+                    end, although simple in appearance, is connected to a very complex and robust AWS backend.</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi vel dolor inventore praesentium,
-                        libero non sequi tenetur? Officia cum similique ex, est voluptas iusto perspiciatis excepturi
-                        provident maiores placeat modi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-                        explicabo nostrum quod cum, id iure
-                        perferendis aspernatur laborum reprehenderit, sapiente neque sequi ea minima ullam. Corrupti
-                        fugiat
-                        ratione et saepe.
+                    <p>CI/CD is covered by linking this repo to AWS CodePipeline. There is a rule set so that when a pull request is approved
+                    and merged into main, the updated main is automatically deployed to the S3 bucket that is hosting the site. CloudWatch
+                    still needs to be manually invalidated (clearing the cache) using "/*" to refresh the entire site. Single pages can also
+                    be invalidated by using the specific file name. We may look to set up auto-invalidation on the React front end once
+                    there is a significant amount of code coverage/ testing.
                     </p>
-
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione deleniti velit autem porro
-                        delectus officiis quod voluptates cumque repellendus animi ad possimus et consectetur tenetur
-                        omnis,
-                        vero, cupiditate distinctio commodi.</p>
-
 
                 </h2>
 
