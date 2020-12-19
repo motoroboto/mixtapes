@@ -207,13 +207,22 @@
                     videoURL = response.url;
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
-                    const videoURL = url.toString(response.url);
+                    videoURL = url.toString(response.url);
                     console.log(videoURL);
                     submitVideo(videoURL);
-        
-       
-                }
+                },
+                submitVideo: async function (videoURL) {
+                    data = {
+                        url: videoURL,
+                        date: parseInt($("#date").val().replace(/-/g, "")),
+                        region: $("#region").val(),
+                        type: $("#videotype").val(),
+                    };
+                    console.log(data);
+                    let res = await axios.post(databaseEndpoint, data);
+                    console.log(res.data);
 
+                },
             }
         })
     </script>
