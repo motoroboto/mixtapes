@@ -204,15 +204,10 @@
                     console.log('Result: ', result)
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
-                    console.log('uploadURL:', this.uploadURL)
                     const videoURL = this.uploadURL;
-                    console.log('videoURL:', videoURL);
                     const date = parseInt($("#date").val().replace(/-/g, ""));
-                    console.log('date:', date);
                     const region = $("#region").val();
-                    console.log('region:', region);
                     const type = $("#videotype").val();
-                    console.log('type:', type);
                     axios({
                         method: 'post',
                         url: databaseEndpoint,
@@ -221,9 +216,9 @@
                             date: date,
                             region: region,
                             type: type
-                        }
-
+                        },
                     })
+                    console.log('data:', data)
                 }
             },
         })
