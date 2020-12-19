@@ -205,7 +205,7 @@
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
                     console.log('uploadURL:', this.uploadURL)
-                    const videoURL = this.url;
+                    const videoURL = this.uploadURL;
                     console.log('videoURL:', videoURL);
                     const date = parseInt($("#date").val().replace(/-/g, ""));
                     console.log('date:', date);
