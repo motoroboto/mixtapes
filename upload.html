@@ -152,7 +152,7 @@
         /* ENTER YOUR ENDPOINT HERE */
 
         const s3Endpoint = 'https://ld4w6jm7ec.execute-api.us-east-1.amazonaws.com/uploads' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
-
+        const videoURL = ''
         const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/addvideo/'
 
         new Vue({
@@ -209,12 +209,12 @@
                     console.log('Result: ', result)
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
-                    const videoURL = url.toString(response.url);
+                    videoURL = url.toString(response.url);
                     console.log(videoURL);
                     submitVideo(videoURL);
                 },
                 submitVideo: async function (videoURL) {
-                    var data = {
+                     data = {
                         url: videoURL,
                         date: parseInt($("#date").val().replace(/-/g, "")),
                         region: $("#region").val(),
