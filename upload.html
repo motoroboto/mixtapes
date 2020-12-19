@@ -47,90 +47,75 @@
     <header class="masthead">
         <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-lg-12 mx-auto">
-                            <div class="card mt-2 mx-auto p-4 bg-secondary">
-                                <div class="card-body bg-dark">
-                                    <div class="container">
-                                        <form id="contact-form" role="form">
-                                            <div class="controls">
-                                                <div class="row">
-                                                    <div id="app">
-                                                        <h1>Upload A Video</h1>
+                <div class="card mt-2 mx-auto p-4 bg-secondary">
+                    <div class="card-body bg-dark">
+                        <div class="controls">
+                            <div class="row">
+                                <div id="app">
+                                    <h1>Video Upload</h1>
 
-                                                        <div v-if="!video">
-
-                                                            <input type="file" name="video" @change="onFileChange">
-                                                        </div>
-                                                        <div v-else>
-                                                            <video :src="video"></video><br>
-                                                            <button class="btn btn-primary" v-if="!uploadURL"
-                                                                @click="removevideo">Remove
-                                                                video</button>
-                                                            <button type="submit" class="btn btn-primary"
-                                                                v-if="!uploadURL" @click="uploadvideo">Upload
-                                                                video</button>
-
-                                                            <h2 v-if="uploadURL">Success! video uploaded to bucket.</h2>
-
-
-                                                            <div class="row" v-if="!uploadURL">
-                                                                <div class="col-md-6">
-
-                                                                    <div class="form-group"> <label for="form_name">
-                                                                            Date</label> <input id="form_name"
-                                                                            type="date" name="date" class="form-control"
-                                                                            data-error="Start Date is required.">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group"> <label
-                                                                            for="form_need">Region</label>
-                                                                        <select id="form_need" name="region"
-                                                                            class="form-control" data-error="Region.">
-                                                                            <option value="" selected disabled>
-                                                                                --Region--
-                                                                            </option>
-                                                                            <option>Manu</option>
-                                                                            <option>Tambopata</option>
-                                                                            <option>Iquitos</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="form-group"> <label for="form_need">What
-                                                                            Kind of
-                                                                            Videos?</label>
-                                                                        <select id="form_need" name="type"
-                                                                            class="form-control"
-                                                                            data-error="Video Type.">
-                                                                            <option value="" selected disabled>--Video
-                                                                                Type--
-                                                                            </option>
-                                                                            <option>Known Mine</option>
-                                                                            <option>Deforestation</option>
-                                                                            <option>Unsorted</option>
-                                                                            <option>Questionable Data</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                        </form>
-                                        </form>
+                                    <div v-if="!video">
+                                        <h2>Select a video</h2>
+                                        <input type="file" @change="onFileChange">
+                                    </div>
+                                    <div v-else>
+                                        <video :src="video"></video><br>
+                                        <button class="btn btn-primary" v-if="!uploadURL" @click="removevideo">Remove
+                                            video</button>
+                                        <button class="btn btn-primary" v-if="!uploadURL" @click="uploadvideo">Upload
+                                            video</button>
+                                    </div>
+                                    <h2 v-if="uploadURL">Success! video uploaded to bucket.</h2>
+                                </div>
+                            </div>
+                            <form id="contact-form" role="form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_name">
+                                                Date</label> <input id="form_name" type="date" name="date"
+                                                class="form-control" data-error="Start Date is required.">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_need">Region</label>
+                                            <select id="form_need" name="region" class="form-control"
+                                                data-error="Region.">
+                                                <option value="" selected disabled>
+                                                    --Region--
+                                                </option>
+                                                <option>Manu</option>
+                                                <option>Tambopata</option>
+                                                <option>Iquitos</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                            </div> <!-- /.8 -->
-                        </div> <!-- /.row-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group"> <label for="form_need">What
+                                        Kind of
+                                        Videos?</label>
+                                    <select id="form_need" name="type" class="form-control" data-error="Video Type.">
+                                        <option value="" selected disabled>
+                                            --Video Type--
+                                        </option>
+                                        <option>Known Mine</option>
+                                        <option>Deforestation</option>
+                                        <option>Unsorted</option>
+                                        <option>Questionable Data</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"><button type="submit" class="btn btn-primary btn-block">Search</button>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
     </header>
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
@@ -161,11 +146,11 @@
     <!-- Core theme JS-->
     <script src="lib/js/scripts.js"></script>
     <script>
-        const MAX_VIDEO_SIZE = 10000000000
+        const MAX_VIDEO_SIZE = 1000000000
 
         /* ENTER YOUR ENDPOINT HERE */
 
-        const API_ENDPOINT = 'https://ld4w6jm7ec.execute-api.us-east-1.amazonaws.com/uploads' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
+        const API_ENDPOINT = 'https://ld4w6jm&ec.execute-api.us-east-1.amazonaws.com/uploads' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
 
         new Vue({
             el: "#app",
@@ -183,8 +168,8 @@
                     // var video = new video()
                     let reader = new FileReader()
                     reader.onload = (e) => {
-                        console.log('length: ', e.target.result.includes('data:video'))
-                        if (!e.target.result.includes('data:video')) {
+                        console.log('length: ', e.target.result.includes('data:video/mp4'))
+                        if (!e.target.result.includes('data:video/mp4')) {
                             return alert('Wrong file type - MP4 only.')
                         }
                         if (e.target.result.length > MAX_VIDEO_SIZE) {
@@ -212,7 +197,7 @@
                     for (var i = 0; i < binary.length; i++) {
                         array.push(binary.charCodeAt(i))
                     }
-                    let blobData = new Blob([new Uint8Array(array)], { type: 'video' })
+                    let blobData = new Blob([new Uint8Array(array)], { type: 'video/mp4' })
                     console.log('Uploading to: ', response.uploadURL)
                     const result = await fetch(response.uploadURL, {
                         method: 'PUT',
