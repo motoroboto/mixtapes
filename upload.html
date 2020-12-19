@@ -63,7 +63,7 @@
                                         <button class="btn btn-primary" v-if="!uploadURL" @click="removevideo">Remove
                                             video</button>
                                         <button class="btn btn-primary" v-if="!uploadURL"
-                                            @click="uploadvideo(); submitVideo();">Upload
+                                            @click="uploadvideo">Upload
                                             video</button>
 
                                     </div>
@@ -187,13 +187,12 @@
                     this.video = ''
                 },
                 uploadvideo: async function (e) {
-                    console.log('Upload clicked')
+                    console.log('Upload clicked!!!!!!!')
                     // Get the presigned URL
                     const response = await axios({
                         method: 'GET',
                         url: s3Endpoint
                     })
-                    const videoURL = response.url;
                     console.log('Response: ', response)
                     console.log('Uploading: ', this.video)
                     let binary = atob(this.video.split(',')[1])
@@ -210,9 +209,11 @@
                     console.log('Result: ', result)
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
+                    const videoURL = response.url;
                     submitVideo(videoURL)
                 },
                 submitVideo: function (videoURL) {
+                    console.log('SECOND FUNCTION!!!!')
                     var data = {
                         url: videoURL,
                         date: parseInt($("#date").val().replace(/-/g, "")),
