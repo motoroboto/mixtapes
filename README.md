@@ -16,24 +16,6 @@ npm -i
 
 You will need to have NodeJS installed.
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Deployment
 
 CI/CD is covered by linking this repo to AWS CodePipeline. There is a rule set so that when a pull request is approved and merged into main, the updated main is automatically deployed to the S3 bucket that is hosting the site. CloudWatch still needs to be manually invalidated (clearing the cache) using "/\*" to refresh the entire site. Single pages can also be invalidated by using the specific file name. We may look to set up auto-invalidation on the React front end once there is a significant amount of code coverage/ testing.
