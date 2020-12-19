@@ -214,7 +214,7 @@
                     console.log(videoURL);
                     submitVideo(videoURL);
                 },
-                submitVideo: async function (videoURL) {
+                function submitVideo(videoURL) {
                      data = {
                         url: videoURL,
                         date: parseInt($("#date").val().replace(/-/g, "")),
@@ -223,7 +223,7 @@
                     };
                     console.log(data);
 
-                    let res = await axios.post(databaseEndpoint, data);
+                    let res = axios.post(databaseEndpoint, data);
                     console.log(res.data);
 
                 }
