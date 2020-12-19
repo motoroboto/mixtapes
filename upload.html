@@ -209,13 +209,13 @@
                     console.log('Result: ', result)
                     // Final URL for the user doesn't need the query string params
                     this.uploadURL = response.uploadURL.split('?')[0]
-                    const videoURL = url.toString(response.url);
-                    console.log(videoURL);
-                    submitVideo(videoURL);
+                    // const videoURL = url.toString(response.url);
+                    // console.log(videoURL);
+                    // submitVideo(videoURL);
                 },
                 submitVideo: async function (videoURL) {
                     var data = {
-                        url: videoURL,
+                        // url: videoURL,
                         date: parseInt($("#date").val().replace(/-/g, "")),
                         region: $("#region").val(),
                         type: $("#videotype").val(),
