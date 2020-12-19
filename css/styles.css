@@ -45,6 +45,10 @@
     "Liberation Mono", "Courier New", monospace;
 }
 
+.result {
+  margin-bottom: 15px;
+}
+
 *,
 *::before,
 *::after {

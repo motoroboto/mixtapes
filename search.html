@@ -106,15 +106,15 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row"><button type="submit"
-                                                        class="btn btn-primary btn-block">Search</button>
+                                                <div class="row"><a href="searchresult.html"
+                                                        class="btn btn-primary btn-block">Search</a>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-                            </div> <!-- /.8 -->
-                        </div> <!-- /.row-->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,65 +145,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script>
-        const MAX_VIDEO_SIZE = 10000000000
 
-        /* ENTER YOUR ENDPOINT HERE */
-
-        const API_ENDPOINT = 'https://nf5yvix54j.execute-api.us-east-1.amazonaws.com/uploads' // e.g.
-        https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
-
-        new Vue({
-            el: "#app",
-            data: {
-                video: '',
-                uploadURL: ''
-            },
-            methods: {
-                onFileChange(e) {
-                    let files = e.target.files || e.dataTransfer.files
-                    if (!files.length) return
-                    this.createvideo(files[0])
-                },
-                createvideo(file) {
-                    // var video = new video()
-                    let reader = new FileReader()
-                    reader.onload = (e) => {
-                        console.log('length: ', e.target.result.includes('data:video'))
-                        if (!e.target.result.includes('data:video')) {
-                            return alert('Wrong file type - JPG only.')
-                        }
-                        if (e.target.result.length > MAX_VIDEO_SIZE) {
-                            return alert('video is loo large.')
-                        }
-                        this.video = e.target.result
-                    }
-                    reader.readAsDataURL(file)
-                },
-                removevideo: function (e) {
-                    console.log('Remove clicked')
-                    this.video = ''
-                },
-                uploadvideo: async function (e) {
-                    console.log('Upload clicked')
-                    // Get the presigned URL
-                    const response = await axios({
-                        method: 'GET',
-                        url: API_ENDPOINT
-                    })
-                    console.log('Response: ', response)
-                    console.log('Uploading: ', this.video)
-                    let binary = atob(this.video.split(',')[1])
-                    let array = []
-                    for (var i = 0; i < binary.length; i++) { array.push(binary.charCodeAt(i)) } let blobData = new Blob([new
-                        Uint8Array(array)], { type: 'video' }) console.log('Uploading to: ', response.uploadURL)
-                    const result = await fetch(response.uploadURL, {
-                            method: ' PUT', body: blobData
-                        }) console.log('Result: ', result)
-                    // Final URL for the user doesn' t need the query string params
-        this.uploadURL = response.uploadURL.split('?')[0]
-            }
-        } }) </script>
 </body>
 
 </html>
