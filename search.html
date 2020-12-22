@@ -18,8 +18,8 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/axios@0.2.1/dist/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+    <!-- <script src="https://unpkg.com/axios@0.2.1/dist/axios.min.js"></script> -->
 </head>
 
 <body id="page-top">
@@ -155,7 +155,6 @@
 
 
         function searchvideo() {
-            event.preventDefault();
             $.ajax({
                 url: 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/',
                 method: "GET",
