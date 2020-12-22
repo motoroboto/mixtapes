@@ -106,9 +106,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row"><a href="searchresult.html"
-                                                        class="btn btn-primary btn-block">Search</a>
-                                                </div>
+                                                <div><button class="btn btn-primary"
+                                                        @click="searchvideo()">Search</button></div>
                                             </div>
                                         </form>
                                     </div>
@@ -145,6 +144,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>
+
+        const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/addvideo/'
+
+        new Vue({
+            // el: "#app",
+            // data: {
+            //     video: '',
+            //     uploadURL: ''
+            // },
+            methods: {
+                searchvideo: async function (e) {
+
+                    // Final URL for the user doesn't need the query string params
+                    // this.uploadURL = response.uploadURL.split('?')[0]
+                    // const videoURL = this.uploadURL;
+                    // console.log('videoURL:', videoURL)
+                    const startdate = parseInt($("#startdate").val().replace(/-/g, ""));
+                    console.log('startdate:', startdate)
+                    const enddate = parseInt($("#enddate").val().replace(/-/g, ""));
+                    console.log('enddate:', enddate)
+                    // console.log('date:', date)
+                    // const region = $("#region").val();
+                    // console.log('region:', region)
+                    // const type = $("#videotype").val();
+                    // console.log('type:', type)
+                    axios.get({
+                        url: databaseEndpoint,
+                        data: {
+                            startdate: startdate,
+                            enddate: enddate,
+                        },
+                    })
+                        .then(function (res) {
+                            console.log(res);
+                        })
+                    console.log('axios:', axios)
+                }
+            },
+        })
+    </script>
 
 </body>
 
