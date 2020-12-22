@@ -154,10 +154,11 @@
 
         // const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/'
         function searchvideo() {
+            event.preventDefault();
             $.ajax({
                 url: 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/',
                 method: "GET",
-                dataType: "json",
+                dataType: "jsonp",
             }).then(function (response) {
                 console.log('this is the reponse', response);
                 // UV index with button element built on
