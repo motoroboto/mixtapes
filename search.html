@@ -146,25 +146,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script>
 
-        const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/'
+        // const xhr = new XMLHttpRequest();
+        // const url = 'https://bar.other/resources/public-data/';
+        // xhr.open('GET', https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/);
+        //     xhr.onreadystatechange = someHandler;
+        // xhr.send();
 
-        $.ajax({
-            url: 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/',
-            method: "GET",
-            dataType: "json",
-        }).then(function (response) {
-            console.log('this is the reponse', response);
-            // UV index with button element built on
-            // $('.uvDiv').html("UV Index: " + '<button class= uVBtn>' + response.value + '</button>');
-            // Setting background-color based off UV Index severity
-            // if (response.value >= 6) {
-            //     $('.uVBtn').css("background-color", "red")
-            // } else if (response.value >= 3) {
-            //     $('.uVBtn').css("background-color", "yellow")
-            // } else {
-            //     $('.uVBtn').css("background-color", "green")
-            // }
-        })
+        // const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/'
+        function searchvideo() {
+            $.ajax({
+                url: 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/',
+                method: "GET",
+                dataType: "json",
+            }).then(function (response) {
+                console.log('this is the reponse', response);
+                // UV index with button element built on
+                // $('.uvDiv').html("UV Index: " + '<button class= uVBtn>' + response.value + '</button>');
+                // Setting background-color based off UV Index severity
+                // if (response.value >= 6) {
+                //     $('.uVBtn').css("background-color", "red")
+                // } else if (response.value >= 3) {
+                //     $('.uVBtn').css("background-color", "yellow")
+                // } else {
+                //     $('.uVBtn').css("background-color", "green")
+                // }
+            })
+        },
     </script>
 
 </body>
