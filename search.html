@@ -148,41 +148,21 @@
 
         const databaseEndpoint = 'https://nos36vuttb.execute-api.us-east-1.amazonaws.com/dev/api/getvideos/'
 
-        new Vue({
-            // el: "#app",
-            // data: {
-            //     video: '',
-            //     uploadURL: ''
-            // },
-            methods: {
-                searchvideo: async function (e) {
-
-                    // Final URL for the user doesn't need the query string params
-                    // this.uploadURL = response.uploadURL.split('?')[0]
-                    // const videoURL = this.uploadURL;
-                    // console.log('videoURL:', videoURL)
-                    const startdate = parseInt($("#startdate").val().replace(/-/g, ""));
-                    console.log('startdate:', startdate)
-                    const enddate = parseInt($("#enddate").val().replace(/-/g, ""));
-                    console.log('enddate:', enddate)
-                    // console.log('date:', date)
-                    // const region = $("#region").val();
-                    // console.log('region:', region)
-                    // const type = $("#videotype").val();
-                    // console.log('type:', type)
-                    axios.get({
-                        url: databaseEndpoint,
-                        data: {
-                            startdate: startdate,
-                            enddate: enddate,
-                        },
-                    })
-                        .then(function (res) {
-                            console.log(res);
-                        })
-                    console.log('axios:', axios)
-                }
-            },
+        $.ajax({
+            url: databaseEndpoint,
+            method: "GET",
+        }).then(function (response) {
+            console.log('this is the reponse', response);
+            // UV index with button element built on
+            // $('.uvDiv').html("UV Index: " + '<button class= uVBtn>' + response.value + '</button>');
+            // Setting background-color based off UV Index severity
+            // if (response.value >= 6) {
+            //     $('.uVBtn').css("background-color", "red")
+            // } else if (response.value >= 3) {
+            //     $('.uVBtn').css("background-color", "yellow")
+            // } else {
+            //     $('.uVBtn').css("background-color", "green")
+            // }
         })
     </script>
 
