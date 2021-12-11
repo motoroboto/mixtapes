@@ -85,7 +85,18 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: black;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 75%,
+      #000000 100%
+    ),
+    url("../assets/img/backdrop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -130,7 +141,7 @@ small {
 }
 
 a {
-  color: #41ac76;
+  color: #f5efef;
   text-decoration: none;
   background-color: transparent;
 }
@@ -559,6 +570,8 @@ pre code {
   flex-wrap: wrap;
   margin-right: -0.75rem;
   margin-left: -0.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .no-gutters {
@@ -643,8 +656,7 @@ pre code {
 .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding: 0.75rem;
 }
 
 .col {
@@ -7552,7 +7564,7 @@ body {
   border: 0;
 }
 
-.masthead {
+/* .masthead {
   position: relative;
   width: 100%;
   height: auto;
@@ -7564,12 +7576,12 @@ body {
       rgba(0, 0, 0, 0.7) 75%,
       #000000 100%
     ),
-    url("../assets/img/rainforest.png");
+    url("../assets/img/backdrop.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
-}
+} */
 .masthead h1 {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -7615,5 +7627,13 @@ video {
 }
 
 .footer {
-  padding: 5rem 0;
+  padding: 5rem;
+}
+
+.gallery {
+  padding-top: 5rem;
+}
+
+.modal-lg {
+  max-width: 65%;
 }
