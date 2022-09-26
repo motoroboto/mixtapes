@@ -17,7 +17,11 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/halloween.css" rel="stylesheet" />
+
     <script src="https://unpkg.com/vue"></script>
     <script src="https://unpkg.com/axios@0.2.1/dist/axios.min.js"></script>
 </head>
@@ -37,21 +41,729 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="btn btn-secondary" href="halloween.html">Halloween</a></li>
                     <li class="nav-item"><a class="btn btn-secondary" href="christmas.html">Christmas</a></li>
-                   <!-- <li class="nav-item"><a class="btn btn-primary" href="signin.html">Coming Soon</a></li> -->
+                    <!-- <li class="nav-item"><a class="btn btn-primary" href="signin.html">Coming Soon</a></li> -->
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead">
-        <div class="container d-flex h-100 align-items-center">
-            <div class="mx-auto text-center">
-                <h2 class="text-white-50 mx-auto mt-1 mb-5">Coming Soon(?)
-                </h2>
-
+    <!-- <header class="masthead"></header> -->
+    <div class="container d-flex h-100 align-items-center">
+        <div class="container gallery">
+            <div class="row row-cols-3">
+                <div class="col vol1">
+                    <div class="card-body bg-dark">
+                        <a href="#modal1" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/01/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal1" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/01/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                            <img src="assets/img/tracksandtreats/01/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ" target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol2">
+                    <div class="card-body bg-dark">
+                        <a href="#modal2" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/02/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal2" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/02/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/02/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol3">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal3" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/03/cover.jpg"
+                                                width="100%"></a>
+                                        <div id="modal3" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/03/cover.jpg" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/03/tracks.jpg" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol4">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal4" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/04/cover.jpg"
+                                                width="100%"></a>
+                                        <div id="modal4" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/04/cover.jpg" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/04/tracks.jpg" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol5">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal5" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/05/cover.jpg"
+                                                width="100%"></a>
+                                        <div id="modal5" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/05/cover.jpg" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/05/tracks.jpg" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol6">
+                    <div class="card-body bg-dark">
+                        <a href="#modal6" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/06/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal6" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/06/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/06/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol7">
+                    <div class="card-body bg-dark">
+                        <a href="#modal7" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/07/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal7" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/07/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/07/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol8">
+                    <div class="card-body bg-dark">
+                        <a href="#modal8" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/08/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal8" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/08/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/08/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol9">
+                    <div class="card-body bg-dark">
+                        <a href="#modal9" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/09/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal9" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/09/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/09/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol10">
+                    <div class="card-body bg-dark">
+                        <a href="#modal10" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/10/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal10" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/10/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                            <img src="assets/img/tracksandtreats/10/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ" target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol11">
+                    <div class="card-body bg-dark">
+                        <a href="#modal11" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/11/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal11" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/11/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/11/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol12">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal12" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/12/cover.jpg"
+                                                width="100%"></a>
+                                        <div id="modal12" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/12/cover.jpg" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/12/tracks.jpg" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol13">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal13" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/13/cover.jpg"
+                                                width="100%"></a>
+                                        <div id="modal13" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/13/cover.jpg" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/13/tracks.jpg" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol14">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal14" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/14/cover.jpg"
+                                                width="100%"></a>
+                                        <div id="modal14" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/14/cover.jpg" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/14/tracks.jpg" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol15">
+                    <div class="card-body bg-dark">
+                        <a href="#modal15" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/15/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal15" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/15/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/15/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol16">
+                    <div class="card-body bg-dark">
+                        <a href="#modal16" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/16/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal16" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/16/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/16/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol17">
+                    <div class="card-body bg-dark">
+                        <a href="#modal17" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/17/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal17" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/17/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/17/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol18">
+                    <div class="card-body bg-dark">
+                        <a href="#modal18" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/18/cover.jpg"
+                                width="100%"></a>
+                        <div id="modal18" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/18/cover.jpg" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/18/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol19">
+                    <div class="card-body bg-dark">
+                        <a href="#modal19" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/19/cover.png"
+                                width="100%"></a>
+                        <div id="modal19" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/19/cover.png" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                            <img src="assets/img/tracksandtreats/19/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ" target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol20">
+                    <div class="card-body bg-dark">
+                        <a href="#modal20" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/20/cover.png"
+                                width="100%"></a>
+                        <div id="modal20" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col" width="50">
+                                                <img src="assets/img/tracksandtreats/20/cover.png" width="100%">
+                                            </div>
+                                            <div class="col" width="50%">
+                                                <img src="assets/img/tracksandtreats/20/tracks.jpg" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"><a
+                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                target="_blank">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col vol21">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal21" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/21/cover.png"
+                                                width="100%"></a>
+                                        <div id="modal21" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/21/cover.png" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/21/tracks.png" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol22">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal22" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/22/cover.png"
+                                                width="100%"></a>
+                                        <div id="modal22" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/22/cover.png" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/22/tracks.png" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <div class="col vol23">
+                                    <div class="card-body bg-dark">
+                                        <a href="#modal23" data-bs-toggle="modal"><img src="assets/img/tracksandtreats/23/cover.png"
+                                                width="100%"></a>
+                                        <div id="modal23" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col" width="50">
+                                                                <img src="assets/img/tracksandtreats/23/cover.png" width="100%">
+                                                            </div>
+                                                            <div class="col" width="50%">
+                                                                <img src="assets/img/tracksandtreats/23/tracks.png" width="100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary"><a
+                                                                href="https://mega.nz/folder/Yl1nALAD#WBSong1K1EZUx5SVDZxBmQ"
+                                                                target="_blank">Download</a></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
         <ul class="list-inline mb-0">
@@ -83,7 +795,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
 </body>
 
 </html>

@@ -15,7 +15,7 @@ body {
       rgba(0, 0, 0, 0.7) 75%,
       #000000 100%
     ),
-    url("../assets/img/christmas.jpg");
+    url("../assets/img/halloween.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -23,17 +23,21 @@ body {
 }
 
 .btn-primary {
-  color: #690101;
-  background-color: #41ac76;
-  border-color: #41ac76;
+  color: rgb(5, 5, 5) !important;
+  background-color: #cf6925;
+  border-color: #cf6925;
   margin-left: 5px;
 }
 .btn-primary:hover {
-  color: #690101;
-  background-color: #077e50e1;
-  border-color: #077e50e1;
+  color: rgb(8, 8, 8) !important;
+  background-color: #bb6023;
+  border-color: #bb6023;
 }
 
 a:hover {
-  color: #690101 !important;
+  color: #000000 !important;
+}
+
+modal-body {
+  background-color: #000000 !important;
 }

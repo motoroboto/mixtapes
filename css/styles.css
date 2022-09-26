@@ -1908,17 +1908,6 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #41ac76;
-  border-color: #41ac76;
-  margin-left: 5px;
-}
-.btn-primary:hover {
-  color: #fff;
-  background-color: #077e50e1;
-  border-color: #077e50e1;
-}
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
@@ -3715,9 +3704,9 @@ input[type="button"].btn-block {
 a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
-button.bg-primary:focus {
-  background-color: #4f837f !important;
-}
+/* button.bg-primary:focus {
+  background-color: #4f837f;
+} */
 
 .bg-secondary {
   background-color: #6c757d !important;
@@ -7338,7 +7327,7 @@ button.bg-black:focus {
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #467370 !important;
+  color: #467370;
 }
 
 .text-secondary {
